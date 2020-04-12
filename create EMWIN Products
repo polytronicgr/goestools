@@ -1,0 +1,5 @@
+# Emergency Mangers Weather Information Network
+# The HRIT stream on the GOES-R series includes EMWIN data. This handler writes EMWIN files and decompresses them if applicable (a subset of EMWIN files is compressed as ZIP file).
+[[handler]]
+type = "emwin"
+directory = "./emwin/{time:%Y-%m-%d}"
