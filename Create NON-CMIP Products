@@ -6,33 +6,6 @@
 #Derived stability indices DSI
 #Cloud top height ACTH
 
-# THE FOLLOWING MAY BE RECEIVED AS SCHEDULED
-#Aerosol detection (including smoke and dust) ASD
-#Aerosol optical depth AOD
-#Aerosol particle size APS
-#Clear sky masks CSM 
-#Cloud layers/heights CLH
-#Cloud and moisture imagery CMI
-#Cloud optical depth COD
-#Cloud particle size distribution CPD
-#Cloud top phase CTP
-#Cloud top pressure CTPR
-#Cloud top temperature CTT
-#Derived motion winds DMW
-#Downward shortwave radiation: surface DSRS
-#Fire/hot spot characterization FSC
-#Hurricane intensity estimation HIE
-#Legacy vertical moisture profile LVM
-#Legacy vertical temperature profile LVP
-#Radiances R
-#Reflected shortwave radiation: TOA
-#Sea and lake ice: age SLA
-#Sea and lake ice: concentration SLIC
-#Sea and lake ice: motion SLIM
-#Sea surface temperature (skin) SST
-#Snow cover SC
-#Total precipitable water TPW
-#Volcanic ash: detection and height VADH
 
 # NOT ALL IMAGERY IS AVAILABLE AT ALL TIMES. NOAA SCHEDULES VARY
 #
