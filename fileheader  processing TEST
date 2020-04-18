@@ -1,0 +1,47 @@
+def parseHeader(type, data):
+  if type == 0:
+    filetypecode, headerlength, datalength = struct.unpack(">BIQ", data)
+    return {"type":type, "filetypecode":filetypecode, "headerlength":headerlength, "datalength":datalength}
+  elif type == 1:
+    bitsperpixel, columns, lines, compression = struct.unpack(">BHHB", data)
+    return {"type":type, "bitsperpixel":bitsperpixel, "columns":columns, "lines":lines, "compression":compression}
+
+  elif type == 2:
+    projname, cfac, lfac, coff, loff = struct.unpack(">32sIIII", data)
+    return {"type":type, "projname":projname, "cfac":cfac, "lfac":lfac, "coff":coff, "loff":loff}
+
+  elif type == 3:
+    return {"type":type, "data":data}
+
+  elif type == 4:
+    return {"type":type, "filename":data}
+
+  elif type == 5:
+    days, ms = struct.unpack(">HI", data[1:])
+    return {"type":type, "days":days, "ms":ms}
+
+  elif type == 6:
+    return {"type":type, "data":data}
+
+  elif type == 7:
+    return {"type":type, "data":data}
+
+  elif type == 128:
+    imageid, sequence, startcol, startline, maxseg, maxcol, maxrow = struct.unpack(">7H", data)
+    return {"type":type, "imageid":imageid, "sequence":sequence, "startcol":startcol, "startline":startline, "maxseg":maxseg, "maxcol":maxcol, "maxrow":maxrow}
+
+  elif type == 129:
+    signature, productId, productSubId, parameter, compression = struct.unpack(">4sHHHB", data)
+    return {"type":type, "signature":signature, "productId":productId, "productSubId":productSubId, "parameter":parameter, "compression":compression}
+
+  elif type == 130:
+    return {"type":type, "data":data}
+
+  elif type == 131:
+    flags, pixel, line = struct.unpack(">HBB", data)
+    return {"type":type, "flags":flags, "pixel":pixel, "line":line}
+
+  elif type == 132:
+    return {"type":type, "data": data}
+  else:
+    return {"type":type}
