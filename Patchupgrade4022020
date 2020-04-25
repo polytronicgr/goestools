@@ -1,0 +1,8 @@
+#How to upgrade after the April 2nd 2020 Downlink change
+#Run these commands to update Goestools
+cd /home/pi/goestools
+git pull origin master
+cd build
+sudo make
+sudo make install
+sudo ldconfig
