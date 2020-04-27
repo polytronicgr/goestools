@@ -1,3 +1,4 @@
+##########FOR TESTING PURPOSES ONLY, DO NOT ADD TO GOESTOOLS
 def parseHeader(type, data):
   if type == 0:
     filetypecode, headerlength, datalength = struct.unpack(">BIQ", data)
